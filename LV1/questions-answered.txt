@@ -1,0 +1,9 @@
+1. Algorithmic complexity of my implementation for functions checking whether the heuristic is 
+	-> consistent - O() 
+	-> optimistic - O(|S| * b^(1+floor(C*/ε)))
+	
+2. Optimism checking can be optimised:
+	-> when cost from the start to the end state is calculated, we can in O(1) determine cost from any state on
+	   that optimal path to the end (instead of calculating the optimal path from each of those states anew)
+	-> or we can use Djikstra's algorithm => new time complexity = O(V^2) or O(V+ElogV) using min-priority queue,
+	   where V is the number of vertices (states) and E is the numeber of edges (transitions)
